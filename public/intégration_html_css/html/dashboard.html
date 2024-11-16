@@ -1,1 +1,60 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-flight checklist -- Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon.jpg" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- JS -->
+    <script defer src="../js/script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Pre-flight checklist</h1>
+            <button class="btn add_checklist">
+                <img src="../assets/addList.svg" alt="Icon add list">
+                Add checklist
+            </button>
+        </header>
+        <main>
+            <div class="dashboard_default">
+                <p>You have not a checklist</p>
+                <button class="btn add_checklist">
+                    <img src="../assets/addList.svg" alt="Icon add list">
+                    Add checklist
+                </button>
+            </div>
+
+            <section>
+                <div class="card_checklist">
+                    <div class="div_buttons">
+                        <button class="btn delete_list">
+                            <img src="../assets/delete.svg" alt="Icon trash for delete the list">
+                        </button>
+                        <button class="btn edit_list">
+                            <img src="../assets/edit.svg" alt="Icon pencil for edit the list">
+                        </button>
+                    </div>
+                    <h2>Checklist name</h2>
+                    <p>Description</p>
+                    <p>
+                        <span>Complete Task</span> / <span>Total Task</span>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>GoodStufForDev by <a href="#">EHUI Michel-Ange</a> © All rights reserved - 2024</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
