@@ -46,12 +46,31 @@ p {
 }
 
 
+
 .container {
     max-width: 1440px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+
+    button {
+        font: var(--textFontSizes);
+        color: var(--white);
+        background-color: var(--black);
+        border: 2px solid;
+        border-color: var(--black);
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .25);
+        text-align: center;
+
+        .icon_add_checklist {
+            fill: var(--white);
+        }
+    }
+
 
     /* Header */
     header {
@@ -71,7 +90,6 @@ p {
     /* Main */
     main {
         flex-grow: 1;
-        display: flex;
 
         /* Default dashboard */
         .dashboard_default {
@@ -98,7 +116,7 @@ p {
         }
 
         section {
-            flex-grow: 1;
+            height: 1fr;
             padding: 4rem 2rem;
             display: grid;
             justify-content: center;
