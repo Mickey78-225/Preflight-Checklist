@@ -100,22 +100,19 @@ p {
         section {
             flex-grow: 1;
             padding: 4rem 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            /* justify-content: space-between; */
-            gap: 5rem 2rem;
-            
+            display: grid;
+            justify-content: center;
+            gap: 2rem 5rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
             /* Checklist Card */
             .card_checklist {
-                flex-basis: calc(30% - 5rem);
                 height: 500px;
-                min-width: 360px;
+                min-width: 350px;
                 max-width: 400px;
                 padding: 1rem;
                 border-radius: 1rem;
-                box-shadow: .75rem .75rem 1rem rgba(0, 0, 0, .25);
-
-                /* Si on a nbrList >  */
+                box-shadow: .75rem .75rem 1rem rgba(0, 0, 0, .25), -.75rem -.75rem 1rem rgba(255, 255, 255, .25);
             }
         }
     }
@@ -133,8 +130,49 @@ p {
 
 
 /* Responsive */
+@media (max-width: 943px) {
+    .container {
+        main {
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+    }
+}
+
 @media (max-width: 426px) {
     html {
-        font-size: 85%;
+        font-size: 87.5%;
     }
+
+    .container {
+        main {
+            section {
+                padding: 2rem 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    html {
+        font-size: 80%;
+    }
+
+    .container {
+        main {
+            section {
+                padding: 2rem 0;
+
+                .card_checklist {
+                    height: 400px;
+                    min-width: 300px;
+                }
+            }
+        }
+    }
+
 }
