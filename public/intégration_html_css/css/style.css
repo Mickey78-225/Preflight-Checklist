@@ -1,0 +1,140 @@
+:root {
+    /* Colors */
+    --blue: #26547C;
+    --red: #EF476F;
+    --yellow: #FFD166;
+    --black: #1A1A1A;
+    --white: #FFFFFF;
+    --green: #06D6A0;
+
+    /* Fonts sizes*/
+    --bigTextFontSizes: bolder 2.5rem 'Roboto', sans-serif;
+    --titleFontSizes: bolder 2rem 'Roboto', sans-serif;
+    --taskFontSizes: 1.5rem 'Roboto', sans-serif;
+    --textFontSizes: 1rem 'Roboto', sans-serif;
+
+}
+
+/* Reset */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style general */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--blue);
+}
+
+h1 {
+    font: var(--bigTextFontSizes);
+    color: var(--yellow);
+}
+
+h2 {
+    font: var(--titleFontSizes);
+    color: var(--yellow);
+}
+
+p {
+    font: var(--textFontSizes);
+    color: var(--white);
+}
+
+
+.container {
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    /* Header */
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--blue);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        margin: 0 auto;
+    }
+
+    /* Main */
+    main {
+        flex-grow: 1;
+        display: flex;
+
+        /* Default dashboard */
+        .dashboard_default {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            display: none;
+
+            /* Title */
+            p {
+                font: var(--bigTextFontSizes);
+                color: var(--yellow);
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        section {
+            flex-grow: 1;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            gap: 5rem 2rem;
+            
+            /* Checklist Card */
+            .card_checklist {
+                flex-basis: calc(30% - 5rem);
+                height: 500px;
+                min-width: 360px;
+                max-width: 400px;
+                padding: 1rem;
+                border-radius: 1rem;
+                box-shadow: .75rem .75rem 1rem rgba(0, 0, 0, .25);
+
+                /* Si on a nbrList >  */
+            }
+        }
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--black);
+        color: rgba(255, 255, 255, .25);
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 426px) {
+    html {
+        font-size: 85%;
+    }
+}
