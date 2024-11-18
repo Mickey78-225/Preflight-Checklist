@@ -1,0 +1,108 @@
+/* Mobile first */
+/* Default dashboard */
+.dashboard_default {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    display: none;
+
+    /* Title */
+    >p {
+        font: var(--bigTextFontSizes);
+        color: var(--yellow);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .btn_add_checklist p{
+            display: block;
+            font: var(--taskFontSizes) !important;
+            text-transform: uppercase;
+    }
+}
+
+section {
+    height: 1fr;
+    padding: 4rem 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    /* Checklist Card */
+    .card_checklist {
+        height: 400px;
+        min-width: 300px;
+        max-width: 400px;
+        padding: 8px;
+        border-radius: 16px;
+        box-shadow: 12px 12px 16px rgba(0, 0, 0, .25), -12px -12px 16px rgba(255, 255, 255, .25);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .div_buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card_text {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            gap: 3rem;
+
+            p {
+                font: var(--taskFontSizes);
+            }
+        }
+
+        .checklist_state {
+            display: flex;
+            justify-content: center;
+
+            p {
+                font: var(--taskFontSizes);
+            }
+        }
+    }
+}
+
+
+
+/* Responsive */
+@media (width >= 560px) {
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        main {
+            section {
+                padding: 4rem 2rem;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                gap: 2rem 5rem;
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+                /* Checklist Card */
+                .card_checklist {
+                    height: 500px;
+                    width: 400px;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
