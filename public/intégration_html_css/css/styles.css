@@ -90,7 +90,8 @@ button {
     .btn_delete {
         border-color: var(--red);
     }
-    .btn_add_task {
+    .btn_add_task,
+    .btn_back {
         border-color: var(--white);
     }
     .btn_edit {
@@ -138,6 +139,12 @@ button {
 /* Responsive */
 @media screen and (width <= 425px) {
     h1 {
-        font-size: 20px;
+        font-size: 20px;    
+    }
+}
+
+@media (width >= 560px) {
+    html {
+        font-size: 16px;
     }
 }
