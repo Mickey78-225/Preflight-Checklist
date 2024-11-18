@@ -22,14 +22,26 @@
             <button class="btn_back">
                 <img src="../assets/back.svg" alt="Icon back">
             </button>
-            <h1>Pre-flight checklist</h1>
-            <button class="btn_add_checklist">
-                <img src="../assets/addList.svg" alt="Icon add list">
-                <p>Add checklist</p> 
+            <h1>Checklist Name</h1>
+            <button class="btn_edit">
+                <img src="../assets/edit.svg" alt="Icon edit checklist"> 
             </button>
         </header>
 
-        <main></main>
+        <main>
+            <div class="description">
+                <p>Description</p>
+            </div>
+
+            <section>
+                <div class="task">
+                    <!-- Obtient l'attribut checked quand la tache est validé et barre le text -->
+                    <input type="checkbox" name="check" id="task" >
+                    <label for="task">Task 1</label>
+                    <p>Task description</p>
+                </div>
+            </section>
+        </main>
 
         <footer>
             <p>GoodStufForDev by <a href="#">EHUI Michel-Ange</a> © All rights reserved - 2024</p>
