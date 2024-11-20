@@ -98,7 +98,7 @@ button {
     .btn_edit {
         border-color: var(--yellow);
     }
-    .btn_validate {
+    .btn_valid {
         border-color: var(--green);
     }
 
