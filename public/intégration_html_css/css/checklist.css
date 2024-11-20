@@ -10,10 +10,6 @@
         h1 {
             font-size: 20px;
         }
-
-        button {
-            padding: .5rem 1rem;
-        }
     }
 
     main {
@@ -61,5 +57,11 @@
         }
     }
     
+}
 
+/* Responsive */
+@media screen and (width > 450px) {
+    html {
+        font-size: 16px;
+    }
 }
