@@ -1,0 +1,119 @@
+/* Responsive */
+@media screen and (width > 768px) {
+    form {
+        padding: 1rem 4rem 0 2rem !important;
+        
+        .task {
+            width: 75%;
+        }
+    }
+}
+@media screen and (width > 540px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media screen and (width >= 1024px) {
+    input[name=checklist_name] {
+        width: 75% !important;  
+    }
+}
+/* Mobile first */
+/* Container */
+.container {
+    height: 100vh;
+    overflow: hidden;
+
+    header {
+        padding: 1rem;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 0 0 8px 0;
+
+        section {
+            height: 76vh;
+            width: 100%;
+            overflow: auto;
+            /* scroll-snap-type: none; */
+            display: flex;
+            flex-direction: column;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+
+            form {
+                padding: 1rem 1rem 0 1rem ;
+
+                input, 
+                textarea {
+                    width: 100%;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    margin-bottom: 4px;
+                    border-width: 2px solide;
+                    border-color: transparent transparent var(--white) transparent;
+                    background-color: transparent;
+                    color: var(--white);
+                    transition: all 0.2s ease;
+
+                    &::placeholder {
+                        color: var(--white);
+                        opacity: 0.5;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border: 2px solid var(--yellow);
+                    }
+                }
+                
+                input {
+                    font: var(--taskFontSizes);
+
+                    &[name=checklist_name] {
+                        font: var(--titleFontSizes);
+                        text-transform: uppercase;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    width: 70%;
+                    height: 70px;
+                    border: 2px solid var(--white);
+                }
+            }
+            /* Div task */
+            .task {
+                padding: 1rem 0;
+                position: relative;
+
+                button {
+                    position: absolute;
+                    top: 60%;
+                    right: 0;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .btn_add_task {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            p{
+                display: block;
+            }
+        }
+        
+    }
+    
+}
