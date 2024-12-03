@@ -1,9 +1,10 @@
 // Import necessary libraries
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 // Import css 
 import './Dashboard.css';
 // Import components
-import Button from '../Button/Button';
+import Button from '../common/Button/Button';
 
 // Styled components
 const StyledDashboardWhithoutList = styled.div`
@@ -17,8 +18,6 @@ const StyledDashboardWhithoutList = styled.div`
     justify-content: center;
     align-items: center;
     gap: 32px;
-
-    display: none;
 
     /* Title */
     >p {
@@ -38,7 +37,11 @@ const DashboardWhithoutList = () => {
     return (
         <StyledDashboardWhithoutList>
             <p>You have not a checklist!!!</p>
-            <Button btnClass='add_checklist' btnImg='../../../public/assets/addList.svg' btnText='add checklist' />
+            <Button
+                btnClass='add_checklist'
+                btnImg='../../../public/assets/addList.svg'
+                btnText='add checklist'
+            />
         </StyledDashboardWhithoutList>
     );
 };
@@ -52,7 +55,6 @@ const StyledDashboardWhithList = styled.section`
     align-items: center;
     gap: 5rem;
 `;
-
 const DashboardWhithList = () => {
     return (
         <StyledDashboardWhithList>
@@ -79,4 +81,16 @@ const DashboardWhithList = () => {
     );
 };
 
-export default { DashboardWhithoutList, DashboardWhithList };
+const Dashboard = ({ isChecklist = false }) => {
+    return (
+        <>
+            {isChecklist ? <DashboardWhithList /> : <DashboardWhithoutList />}
+        </>
+    );
+};
+
+Dashboard.propTypes = {
+    isChecklist: PropTypes.bool,
+};
+
+export default Dashboard;

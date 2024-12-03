@@ -21,7 +21,7 @@ const Header = () => {
             <h1>Pre-flight checklist</h1>
             <Button
                 btnClass="add_checklist"
-                BtnImg="../../../public/assets/addList.svg"
+                btnImg="../../../public/assets/addList.svg"
             />
         </StyledHeader>
     );
