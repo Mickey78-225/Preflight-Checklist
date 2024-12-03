@@ -60,66 +60,12 @@ ul {
     list-style: none;
 }
 
-button {
-    font: var(--textFontSizes);
-    color: var(--white);
-    background-color: var(--black);
-    border: 2px solid;
-    border-color: var(--black);
-    border-radius: 16px;
-    padding: 8px 12px;
-    cursor: pointer;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-
-    p {
-        display: none;
-    }
-}
-
-.container {
+#root {
     max-width: 1440px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-
-    .btn_add_checklist {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        background-color: var(--red);
-        border-color: var(--red);
-        
-        img {
-            scale: 1.5;
-        }
-    }
-
-    .btn_delete,
-    .btn_removeTask {
-        border-color: var(--red);
-    }
-
-    .btn_removeTask {
-        padding: 0 4px;
-        border-radius: 8px;
-        position: relative;
-        top: 50%;
-        right: 0;
-    }
-
-    .btn_add_task,
-    .btn_back {
-        border-color: var(--white);
-    }
-
-    .btn_edit {
-        border-color: var(--yellow);
-    }
-
-    .btn_valid {
-        border-color: var(--green);
-    }
 
     /* Header */
     header {
