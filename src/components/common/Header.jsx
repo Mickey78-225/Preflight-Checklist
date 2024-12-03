@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "./Button/Button";
 
 const StyledHeader = styled.header`
         width: 100%;
@@ -15,15 +16,15 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
-    return ( 
+    return (
         <StyledHeader>
             <h1>Pre-flight checklist</h1>
-            <button className="btn_add_checklist">
-                <img src="../../../public/assets/addList.svg" alt="Icon add list" />
-                <p>Add checklist</p> 
-            </button>
+            <Button
+                btnClass="add_checklist"
+                BtnImg="../../../public/assets/addList.svg"
+            />
         </StyledHeader>
     );
 }
- 
+
 export default Header;
