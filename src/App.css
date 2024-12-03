@@ -1,0 +1,153 @@
+:root {
+    /* Colors */
+    --blue: #26547C;
+    --red: #EF476F;
+    --yellow: #FFD166;
+    --black: #1A1A1A;
+    --white: #FFFFFF;
+    --green: #06D6A0;
+
+    /* Fonts sizes*/
+    --bigTextFontSizes: bolder 2.5rem 'Roboto', sans-serif;
+    --titleFontSizes: bolder 2rem 'Roboto', sans-serif;
+    --taskFontSizes: 1.5rem 'Roboto', sans-serif;
+    --textFontSizes: 1rem 'Roboto', sans-serif;
+
+}
+
+/* Reset */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile first */
+/* Style general */
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--blue);
+}
+
+h1 {
+    text-align: center;
+    font: var(--bigTextFontSizes);
+    color: var(--yellow);
+}
+
+h2 {
+    font: var(--titleFontSizes);
+    color: var(--yellow);
+}
+
+p {
+    font: var(--textFontSizes);
+    color: var(--white);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font: var(--textFontSizes);
+    color: var(--white);
+    background-color: var(--black);
+    border: 2px solid;
+    border-color: var(--black);
+    border-radius: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    p {
+        display: none;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .btn_add_checklist {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        background-color: var(--red);
+        border-color: var(--red);
+        
+        img {
+            scale: 1.5;
+        }
+    }
+
+    .btn_delete,
+    .btn_removeTask {
+        border-color: var(--red);
+    }
+
+    .btn_removeTask {
+        padding: 0 4px;
+        border-radius: 8px;
+        position: relative;
+        top: 50%;
+        right: 0;
+    }
+
+    .btn_add_task,
+    .btn_back {
+        border-color: var(--white);
+    }
+
+    .btn_edit {
+        border-color: var(--yellow);
+    }
+
+    .btn_valid {
+        border-color: var(--green);
+    }
+
+    /* Header */
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 1rem 2rem;
+        background-color: var(--blue);
+        
+    }
+
+    /* Main */
+    main {
+        flex-grow: 1;
+    }
+}
+
+/* Responsive */
+@media screen and (width <=425px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (width >=758px) {
+    html {
+        font-size: 16px;
+    }
+}
