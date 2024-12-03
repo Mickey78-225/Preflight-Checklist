@@ -23,8 +23,8 @@
     }
 
     .btn_add_checklist p{
-            display: block;
-            font: var(--taskFontSizes) !important;
+        display: block;
+        font: var(--taskFontSizes) !important;
             text-transform: uppercase;
     }
 }
@@ -61,23 +61,37 @@ section {
             align-items: center;
             padding: 2rem 0;
             gap: 3rem;
-
+            
             p {
                 font: var(--taskFontSizes);
             }
         }
 
-        .checklist_state {
-            display: flex;
-            justify-content: center;
-
-            p {
-                font: var(--taskFontSizes);
-            }
-        }
     }
 }
 
+.checklist_state {
+    display: flex;
+    justify-content: center;
+
+    p {
+        font: var(--taskFontSizes);
+    }
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--black);
+    
+    p {
+        color: rgba(255, 255, 255, .25);
+        text-align: center;
+    }
+}
 
 
 /* Responsive */
