@@ -40,6 +40,17 @@ const StyledCard = styled.div`
     
         p {
             font: var(--taskFontSizes);
+            font-weight: bold;
+
+            span.empty {
+                color: var(--red);
+            }
+            span.inProgress {
+                color: var(--yellow);
+            }
+            span.done {
+                color: var(--green);
+            }
         }
     }
 
@@ -54,8 +65,9 @@ const StyledCard = styled.div`
 const ChecklistItem = ({
     title = 'Checklist name',
     description = 'Description',
-    checklistState = 'Complete Task / Total Task'
-
+    completedTasks = 0,
+    totalTasks = 0,
+    ChecklistState
 }) => {
     return (
         <StyledCard>
@@ -70,7 +82,7 @@ const ChecklistItem = ({
             </div>
 
             <div className="checklist_state">
-                <p><span>{checklistState}</span></p>
+                <p><span className={ChecklistState} >{completedTasks} / {totalTasks} </span></p>
             </div>
         </StyledCard>
     );
@@ -79,7 +91,9 @@ const ChecklistItem = ({
 ChecklistItem.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
-    checklistState: PropTypes.string,
+    completedTasks: PropTypes.number,
+    totalTasks: PropTypes.number,
+    ChecklistState: PropTypes.string.isRequired
 };
 
 export default ChecklistItem;

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './Dashboard.css';
 // Import components
 import Button from '../common/Button/Button';
-import ChecklistItem from '../Checklist/ChecklistItem';
+import DisplayChecklist from '../Checklist/DisplayChecklist';
 
 // Styled components
 const StyledDashboardWhithoutList = styled.div`
@@ -48,18 +48,27 @@ const DashboardWhithoutList = () => {
 };
 
 // Styled components
-const StyledDashboardWhithList = styled.section`
+const StyledDashboardWhithList = styled.ul`
     height: 1fr;
     padding: 4rem 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+
+    @media screen and (width >= 560px) {
+        padding: 4rem 2rem;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        gap: 2rem 5rem;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
 `;
 const DashboardWhithList = () => {
     return (
         <StyledDashboardWhithList>
-            <ChecklistItem />
+            <DisplayChecklist />
         </StyledDashboardWhithList>
     );
 };

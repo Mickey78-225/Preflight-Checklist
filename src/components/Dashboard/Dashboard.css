@@ -4,7 +4,7 @@
 @media (width >= 560px) {
     #root {
         main {
-            section {
+            ul {
                 padding: 4rem 2rem;
                 display: grid;
                 align-items: center;
