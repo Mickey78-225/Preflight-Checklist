@@ -52,8 +52,8 @@ const StyledCard = styled.div`
 
 
 const ChecklistItem = ({
-    checklistTitle = 'Checklist name',
-    checklistDescription = 'Description',
+    title = 'Checklist name',
+    description = 'Description',
     checklistState = 'Complete Task / Total Task'
 
 }) => {
@@ -65,8 +65,8 @@ const ChecklistItem = ({
             </div>
 
             <div className="card_text">
-                <h2>{checklistTitle}</h2>
-                <p>{checklistDescription}</p>
+                <h2>{title}</h2>
+                <p>{description}</p>
             </div>
 
             <div className="checklist_state">
@@ -77,8 +77,8 @@ const ChecklistItem = ({
 };
 
 ChecklistItem.propTypes = {
-    checklistTitle: PropTypes.string,
-    checklistDescription: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
     checklistState: PropTypes.string,
 };
 
