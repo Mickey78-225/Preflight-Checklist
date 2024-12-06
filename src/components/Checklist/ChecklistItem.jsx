@@ -60,8 +60,8 @@ const ChecklistItem = ({
     return (
         <StyledCard>
             <div className="div_buttons">
-                <Button btnClass='delete' btnImge='../../../public/assets/delete.svg' />
-                <Button btnClass='edit' btnImge='../../../public/assets/edit.svg' />
+                <Button btnClass='delete' btnImg='../../../assets/delete.svg' />
+                <Button btnClass='edit' btnImg='../../../public/assets/edit.svg' />
             </div>
 
             <div className="card_text">

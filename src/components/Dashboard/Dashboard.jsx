@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 import './Dashboard.css';
 // Import components
 import Button from '../common/Button/Button';
+import ChecklistItem from '../Checklist/ChecklistItem';
 
 // Styled components
 const StyledDashboardWhithoutList = styled.div`
-        position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,7 +28,7 @@ const StyledDashboardWhithoutList = styled.div`
         text-transform: uppercase;
     }
 
-    .btn_add_checklist p{
+    .add_checklist p{
         display: block;
         font: var(--taskFontSizes) !important;
             text-transform: uppercase;
@@ -58,30 +59,12 @@ const StyledDashboardWhithList = styled.section`
 const DashboardWhithList = () => {
     return (
         <StyledDashboardWhithList>
-
-            <div className="card_checklist">
-                <div className="div_buttons">
-                    <button className="btn_delete">
-                        <img src="../assets/delete.svg" alt="Icon trash for delete the list" />
-                    </button>
-                    <button className="btn_edit">
-                        <img src="../assets/edit.svg" alt="Icon pencil for edit the list" />
-                    </button>
-                </div>
-                <div className="card_text">
-                    <h2>Checklist name</h2>
-                    <p>Description</p>
-                </div>
-                <div className="checklist_state">
-                    <p><span>Complete Task</span> / <span>Total Task</span></p>
-                </div>
-            </div>
-
+            <ChecklistItem />
         </StyledDashboardWhithList>
     );
 };
 
-const Dashboard = ({ isChecklist = false }) => {
+const Dashboard = ({ isChecklist = true }) => {
     return (
         <>
             {isChecklist ? <DashboardWhithList /> : <DashboardWhithoutList />}
