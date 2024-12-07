@@ -1,17 +1,15 @@
 // Import styles
 import './App.css'
 // Import components
-import Header from './components/common/Header'
-import Dashboard from './components/Dashboard/Dashboard'
+// import Dashboard from './components/Dashboard/Dashboard'
+import Checklist from './components/Checklist/Checklist'
 
 function App() {
 
 	return (
 		<>
-			<Header />
-			<main>
-				<Dashboard />
-			</main>
+			{/* <Dashboard /> */}
+			<Checklist />
 		</>
 	)
 }

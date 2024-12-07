@@ -6,6 +6,7 @@ import './Dashboard.css';
 // Import components
 import Button from '../common/Button/Button';
 import DisplayChecklist from '../Checklist/DisplayChecklist';
+import Header from '../common/Header';
 
 // Styled components
 const StyledDashboardWhithoutList = styled.div`
@@ -40,7 +41,7 @@ const DashboardWhithoutList = () => {
             <p>You have not a checklist!!!</p>
             <Button
                 btnClass='add_checklist'
-                btnImg='../../../public/assets/addList.svg'
+                btnImg='/assets/addList.svg'
                 btnText='add checklist'
             />
         </StyledDashboardWhithoutList>
@@ -74,9 +75,13 @@ const DashboardWhithList = () => {
 };
 
 const Dashboard = ({ isChecklist = true }) => {
+    console.log(window.location.pathname);
     return (
         <>
-            {isChecklist ? <DashboardWhithList /> : <DashboardWhithoutList />}
+            <Header h1Text='Preflight checklist' btnAddChecklist=''/>
+            <main>
+                {isChecklist ? <DashboardWhithList /> : <DashboardWhithoutList />}
+            </main>
         </>
     );
 };
